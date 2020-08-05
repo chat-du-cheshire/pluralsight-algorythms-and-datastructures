@@ -16,6 +16,17 @@ export class LinkedList<T> {
         this.count++;
     }
 
+    removeFirst() {
+        if (this.count) {
+            this.head = this.head.next;
+            this.count--;
+
+            if (!this.head) {
+                this.tail = null;
+            }
+        }
+    }
+
     addLast(node: ListNode<T>) {
         if (this.count) {
             this.tail.next = node;
@@ -25,6 +36,23 @@ export class LinkedList<T> {
 
         this.tail = node;
         this.count++;
+    }
+
+    removeLast() {
+        if (this.count) {
+            if (this.head === this.tail) {
+                this.head = null;
+                this.tail = null;
+            } else {
+                let node = this.head;
+                while (node.next != this.tail) {
+                    node = node.next;
+                }
+                node.next = null;
+                this.tail = node;
+            }
+            this.count--;
+        }
     }
 
     print() {
