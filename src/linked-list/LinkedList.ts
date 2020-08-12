@@ -45,7 +45,7 @@ export class LinkedList<T> {
                 this.tail = null;
             } else {
                 let node = this.head;
-                while (node.next != this.tail) {
+                while (node.next !== this.tail) {
                     node = node.next;
                 }
                 node.next = null;
@@ -57,9 +57,17 @@ export class LinkedList<T> {
 
     print() {
         let node = this.head;
-        while (node != null) {
+        while (node !== null) {
             console.log(node);
             node = node.next;
+        }
+    }
+
+    *enumerate() {
+        let current = this.head;
+        while (current !== null) {
+            yield current;
+            current = current.next;
         }
     }
 }

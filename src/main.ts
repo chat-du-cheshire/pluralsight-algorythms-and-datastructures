@@ -10,18 +10,10 @@ const list1 = new LinkedList<number>();
 list1.addFirst(node1);
 list1.addFirst(node2);
 list1.addFirst(node3);
-list1.removeFirst();
-list1.print();
 
-console.log('================');
+const iterator = list1.enumerate();
 
-const nodeA = new ListNode('A');
-const nodeB = new ListNode('B');
-const nodeC = new ListNode('C');
-
-const list2 = new LinkedList<string>();
-list2.addLast(nodeA);
-list2.addLast(nodeB);
-list2.addLast(nodeC);
-list2.removeLast();
-list2.print();
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
