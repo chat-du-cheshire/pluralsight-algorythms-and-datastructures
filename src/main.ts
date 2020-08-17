@@ -7,9 +7,12 @@ const node3 = new ListNode(3);
 
 const list1 = new LinkedList<number>();
 
-list1.add(1);
-list1.add(2);
-list1.add(3);
+list1.addFirst(node1);
+list1.addFirst(node2);
+list1.addFirst(node3);
 
-console.log(list1.print());
+list1.print('Before:');
 
+list1.clear();
+
+list1.print('After:');

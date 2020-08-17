@@ -55,7 +55,11 @@ export class LinkedList<T> {
         }
     }
 
-    print() {
+    print(title?: string) {
+        if(title) {
+            console.log(title);
+        }
+
         let node = this.head;
         while (node !== null) {
             console.log(node);
@@ -87,7 +91,11 @@ export class LinkedList<T> {
         this.addFirst(node);
     }
 
+    clear() {
+        this.head = null;
+        this.tail = null;
+        this.count = 0;
+    }
     // TODO:
     //  remove
-    //  clear
 }
