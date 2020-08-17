@@ -96,6 +96,28 @@ export class LinkedList<T> {
         this.tail = null;
         this.count = 0;
     }
-    // TODO:
-    //  remove
+
+    remove(value: T) {
+        let node = this.head;
+        let prev = null;
+
+        while (node && node.node !== value) {
+            prev = node;
+            node = node.next;
+        }
+
+        if (node && node.node === value) {
+            if (node === this.head) {
+                this.head = node.next;
+            } else {
+                prev.next = node.next;
+
+                if (node === this.tail) {
+                    this.tail = prev;
+                }
+            }
+            node.next = null;
+            this.count--;
+        }
+    }
 }
