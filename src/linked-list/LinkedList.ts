@@ -78,12 +78,16 @@ export class LinkedList<T> {
             node = node.next;
         }
 
-        return node
+        return node;
+    }
+
+    add(value: T) {
+        const node = new ListNode(value);
+
+        this.addFirst(node);
     }
 
     // TODO:
-    //  find
     //  remove
-    //  add
     //  clear
 }
