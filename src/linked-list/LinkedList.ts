@@ -70,4 +70,20 @@ export class LinkedList<T> {
             current = current.next;
         }
     }
+
+    find(value: T) {
+        let node = this.head;
+
+        while (node && node.node !== value) {
+            node = node.next;
+        }
+
+        return node
+    }
+
+    // TODO:
+    //  find
+    //  remove
+    //  add
+    //  clear
 }

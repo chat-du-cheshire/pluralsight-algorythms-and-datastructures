@@ -11,9 +11,8 @@ list1.addFirst(node1);
 list1.addFirst(node2);
 list1.addFirst(node3);
 
-const iterator = list1.enumerate();
+console.log(list1.find(1));
+console.log(list1.find(2));
+console.log(list1.find(3));
+console.log(list1.find(4));
 
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
